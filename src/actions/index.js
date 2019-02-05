@@ -3,7 +3,9 @@ import {
     GET_RECENT,
     SEARCH_PHOTO,
     HANDLE_SEARCH_TERM_CHANGE,
-    HANDLE_SEARCH_TERM_SUBMIT
+    HANDLE_SEARCH_TERM_SUBMIT,
+    GOOGLE_SIGNIN,
+    GOOGLE_SIGNOUT
 } from './types';
 
 export const getRecent = () => async dispatch => {
@@ -24,4 +26,12 @@ export const onSearchTermChange = (term) => dispatch => {
 
 export const onSearchTermSubmit = (term) => dispatch => {
     dispatch({ type: HANDLE_SEARCH_TERM_SUBMIT, payload: term });
+};
+
+export const googleSignIn = (userId) => dispatch => {
+    dispatch({ type: GOOGLE_SIGNIN, payload: userId });
+};
+
+export const googleSignOut = () => dispatch => {
+    dispatch({ type: GOOGLE_SIGNOUT });
 };

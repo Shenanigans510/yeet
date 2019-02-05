@@ -1,4 +1,5 @@
 import React from 'react';
+import GoogleAuth from './GoogleAuth';
 
 const Header = () => {
     return (
@@ -9,8 +10,12 @@ const Header = () => {
             <a className="item">
                 Yeets
             </a>
+            
+            <a className="right item">
+                <GoogleAuth />
+            </a>
         </div>
-    );
+    )
 };
 
 export default Header;
